@@ -22,12 +22,21 @@ base-OS attack surface:
 | [`Dockerfile.micro`](Dockerfile.micro) | `ubi9/ubi-micro` | **none** | bash only | yes |
 
 `Dockerfile.micro` is the recommended pattern: a full-UBI **builder** stage runs
-`dnf upgrade` and `pixi install`, then the `pixi` binary and the solved
-environment are `COPY`-ed into `ubi9-micro`. Both are relocatable: a conda-forge
-environment bundles its own Python, OpenSSL, libstdc++, etc., and pixi is a single
-glibc-linked binary, so they run on a near-empty base. The only host dependency
-is glibc, which ubi-micro provides. What gets left behind is dnf and a few hundred
-base-OS RPMs, *not* pixi.
+`pixi install`, then the `pixi` binary and the solved environment are `COPY`-ed
+into `ubi9-micro`. Both are relocatable: a conda-forge environment bundles its own
+Python, OpenSSL, libstdc++, etc., and pixi is a single glibc-linked binary, so they
+run on a near-empty base. The only host dependency is glibc, which ubi-micro
+provides. What gets left behind is dnf and a few hundred base-OS RPMs, *not* pixi.
+
+**Patching the micro base.** The micro builder intentionally does *not* run
+`dnf upgrade`: nothing from the builder's OS reaches the runtime, so it would
+patch nothing. (full and minimal *do* upgrade, because their base OS ships to
+production.) You keep micro's OS current from the outside, by pinning `ubi-micro`
+to a digest and refreshing it on a schedule. In this build the residual 16 OS CVEs
+are all *no-fix* advisories (glibc, libgcc, pcre2, ncurses, coreutils), so there
+is nothing to upgrade to regardless; rebuilding the rootfs with `dnf --installroot`
+would yield the same 16. Reach for `dnf --installroot` only when you need to add or
+pin specific OS libraries.
 
 ## Results
 

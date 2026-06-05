@@ -13,8 +13,11 @@
 # ---- builder: the full UBI base does the heavy lifting ----
 FROM registry.access.redhat.com/ubi9/ubi:latest AS builder
 
-RUN dnf -y upgrade && dnf clean all && rm -rf /var/cache/dnf
-
+# Note: no `dnf upgrade` here. Nothing from this stage's OS is copied into the
+# runtime, so upgrading it would not patch the final image. (The full and minimal
+# images DO upgrade, because their base OS ships to production. Micro's OS comes
+# entirely from the ubi-micro base below, which you keep current by pulling a
+# fresh tag -- you cannot patch from inside it.)
 ENV PIXI_VERSION=0.70.1
 RUN curl -fsSL https://pixi.sh/install.sh | bash
 ENV PATH="/root/.pixi/bin:${PATH}"
@@ -25,6 +28,8 @@ COPY main.py ./
 RUN pixi install --locked
 
 # ---- runtime: ubi9-micro receives pixi + the workspace ----
+# Pin to a digest (ubi-micro@sha256:...) in production and refresh on a schedule;
+# pulling a fresh ubi-micro is how this image picks up OS security errata.
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
 
 WORKDIR /app
