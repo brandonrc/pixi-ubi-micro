@@ -1,0 +1,50 @@
+# syntax=docker/dockerfile:1
+#
+# Patch the ubi-micro OS from the outside, then assemble the runtime FROM scratch.
+#
+# Use this when you are PINNED to an older, qualified ubi-micro and cannot just
+# pull :latest yet. This is common in enterprise settings, where re-qualifying a
+# base image takes weeks and your running base drifts behind current errata. dnf
+# in the full-UBI builder patches the micro rootfs via --installroot (micro has
+# no package manager of its own), so you apply security fixes now without changing
+# your base tag.
+#
+# Set MICRO_BASE to your pinned base. Against :latest it is a no-op ("Nothing to
+# do"). Against a stale base it pulls the available errata. Measured example on
+# ubi-micro:9.2 -> Trivy 67 CVEs (7 HIGH) drops to 16 (0 HIGH), the same floor as
+# :latest.
+#
+#   docker build -f Dockerfile.micro-patched \
+#     --build-arg MICRO_BASE=registry.access.redhat.com/ubi9/ubi-micro:9.2 \
+#     -t pixi-ubi:micro-patched .
+
+ARG MICRO_BASE=registry.access.redhat.com/ubi9/ubi-micro:latest
+
+# ---- builder: env + pixi (same as Dockerfile.micro) ----
+FROM registry.access.redhat.com/ubi9/ubi:latest AS builder
+ENV PIXI_VERSION=0.70.1
+RUN curl -fsSL https://pixi.sh/install.sh | bash
+ENV PATH="/root/.pixi/bin:${PATH}"
+WORKDIR /app
+COPY pixi.toml pixi.lock ./
+COPY main.py ./
+RUN pixi install --locked
+
+# ---- patch the (possibly stale) micro rootfs from a builder that has dnf ----
+FROM ${MICRO_BASE} AS microfs
+
+FROM registry.access.redhat.com/ubi9/ubi:latest AS patcher
+COPY --from=microfs / /mnt/root
+RUN dnf -y --installroot=/mnt/root --releasever 9 upgrade \
+    && dnf -y --installroot=/mnt/root clean all \
+    && rm -rf /mnt/root/var/cache/* /mnt/root/var/log/dnf*
+
+# ---- runtime: scratch + the patched rootfs + pixi + env ----
+FROM scratch
+COPY --from=patcher /mnt/root /
+WORKDIR /app
+COPY --from=builder /root/.pixi/bin/pixi /usr/local/bin/pixi
+COPY --from=builder /app/pixi.toml /app/pixi.lock /app/main.py /app/
+COPY --from=builder /app/.pixi/envs/default /app/.pixi/envs/default
+ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
+ENTRYPOINT ["pixi", "run", "--locked", "start"]

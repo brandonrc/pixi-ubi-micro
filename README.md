@@ -32,11 +32,22 @@ provides. What gets left behind is dnf and a few hundred base-OS RPMs, *not* pix
 `dnf upgrade`: nothing from the builder's OS reaches the runtime, so it would
 patch nothing. (full and minimal *do* upgrade, because their base OS ships to
 production.) You keep micro's OS current from the outside, by pinning `ubi-micro`
-to a digest and refreshing it on a schedule. In this build the residual 16 OS CVEs
-are all *no-fix* advisories (glibc, libgcc, pcre2, ncurses, coreutils), so there
-is nothing to upgrade to regardless; rebuilding the rootfs with `dnf --installroot`
-would yield the same 16. Reach for `dnf --installroot` only when you need to add or
-pin specific OS libraries.
+to a digest and refreshing it on a schedule. Against a current base the residual
+16 OS CVEs are all *no-fix* advisories (glibc, libgcc, pcre2, ncurses, coreutils),
+so there is nothing to upgrade to.
+
+If you are pinned to an **older** base and cannot re-qualify it yet (a common
+enterprise case), you can still apply errata from the outside with
+`dnf --installroot`: see [`Dockerfile.micro-patched`](Dockerfile.micro-patched).
+dnf in the full-UBI builder patches the micro rootfs even though micro has no
+package manager. Measured on `ubi-micro:9.2`: Trivy 67 CVEs (7 HIGH) drops to 16
+(0 HIGH), the same floor as `:latest`.
+
+```bash
+docker build -f Dockerfile.micro-patched \
+  --build-arg MICRO_BASE=registry.access.redhat.com/ubi9/ubi-micro:9.2 \
+  -t pixi-ubi:micro-patched .
+```
 
 ## Results
 
