@@ -26,7 +26,7 @@ jobs:
         run: docker run --rm pixi-ubi:${{ matrix.variant }}
 
       - name: Trivy scan
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: pixi-ubi:${{ matrix.variant }}
           format: table
@@ -34,7 +34,7 @@ jobs:
           exit-code: "0"
 
       - name: Grype scan
-        uses: anchore/scan-action@v4
+        uses: anchore/scan-action@v7
         with:
           image: pixi-ubi:${{ matrix.variant }}
           fail-build: false
