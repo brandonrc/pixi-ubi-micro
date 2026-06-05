@@ -1,19 +1,21 @@
 # syntax=docker/dockerfile:1
 #
-# Production image: do ALL the work on the full UBI9 base, then copy only
-# the solved environment into ubi9-micro -- which has no package manager
-# and no shell.
+# Production image: do ALL the package-manager work on the full UBI9 base, then
+# copy pixi + the solved environment into ubi9-micro -- which has no package
+# manager of its own.
 #
 # A conda-forge environment is self-contained (it bundles its own Python,
-# libstdc++, OpenSSL, etc.), so it runs fine on a near-empty base. The only
-# host dependency is glibc, which ubi-micro provides.
+# libstdc++, OpenSSL, etc.), and the pixi binary is a single glibc-linked
+# executable. Both run fine on a near-empty base; the only host dependency is
+# glibc, which ubi-micro provides. So you get a working `pixi run` image without
+# dragging dnf and a few hundred base-OS RPMs into production.
 
 # ---- builder: the full UBI base does the heavy lifting ----
 FROM registry.access.redhat.com/ubi9/ubi:latest AS builder
 
 RUN dnf -y upgrade && dnf clean all && rm -rf /var/cache/dnf
 
-ENV PIXI_VERSION=0.66.0
+ENV PIXI_VERSION=0.70.1
 RUN curl -fsSL https://pixi.sh/install.sh | bash
 ENV PATH="/root/.pixi/bin:${PATH}"
 
@@ -22,16 +24,22 @@ COPY pixi.toml pixi.lock ./
 COPY main.py ./
 RUN pixi install --locked
 
-# ---- runtime: ubi9-micro receives only the environment ----
+# ---- runtime: ubi9-micro receives pixi + the workspace ----
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
 
 WORKDIR /app
-COPY --from=builder /app/.pixi/envs/default /app/.pixi/envs/default
-COPY --from=builder /app/main.py /app/main.py
 
-# ubi-micro has no shell, so we cannot source an activation script.
-# Putting the environment's bin directory on PATH is enough: the interpreter
-# resolves its own shared libraries via rpath, independent of the OS.
+# pixi itself: a single glibc-linked binary. ubi-micro has no package manager,
+# so we copy the executable in rather than installing it.
+COPY --from=builder /root/.pixi/bin/pixi /usr/local/bin/pixi
+
+# The workspace manifest, lockfile, app code, and the already-solved environment.
+COPY --from=builder /app/pixi.toml /app/pixi.lock /app/main.py /app/
+COPY --from=builder /app/.pixi/envs/default /app/.pixi/envs/default
+
+# Put the env on PATH so `python` works directly, and let pixi find the workspace.
 ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
 
-ENTRYPOINT ["python", "main.py"]
+# `pixi run` works against the copied environment -- no network, no re-solve,
+# because the lockfile and the installed env already match.
+ENTRYPOINT ["pixi", "run", "--locked", "start"]

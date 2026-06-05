@@ -12,7 +12,7 @@ FROM registry.access.redhat.com/ubi9/ubi:latest
 RUN dnf -y upgrade && dnf clean all && rm -rf /var/cache/dnf
 
 # Install a pinned pixi (the installer reads PIXI_VERSION from the env).
-ENV PIXI_VERSION=0.66.0
+ENV PIXI_VERSION=0.70.1
 RUN curl -fsSL https://pixi.sh/install.sh | bash
 ENV PATH="/root/.pixi/bin:${PATH}"
 
@@ -23,7 +23,7 @@ COPY main.py ./
 # Solve + materialize the environment in place from the lockfile.
 RUN pixi install --locked
 
-# pixi (and dnf) are only needed at build time. At runtime we just need the
-# environment on PATH -- the same activation the micro image uses.
+# Run through pixi, just like you would locally. The env is also on PATH so
+# `python` works directly and downstream images can build on this one.
 ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["pixi", "run", "--locked", "start"]

@@ -1,38 +1,48 @@
 # pixi-ubi-micro
 
-Companion repo for the OpenTeams Engineering blog post **"Slimmer, safer pixi
-containers: a UBI-micro multi-stage build."**
+Companion repo for the OpenTeams Engineering blog post **"pixi on UBI-micro: A
+Smaller, Safer Multi-Stage Container Build."**
 
-It builds the **same** [pixi](https://pixi.sh) environment (Python 3.12 +
-numpy/pandas/scipy) on three different Red Hat UBI9 bases and scans each with
+It builds the **same** [pixi](https://pixi.sh) (v0.70.1) environment (Python 3.12
++ numpy/pandas/scipy) on three different Red Hat UBI9 bases and scans each with
 [Trivy](https://github.com/aquasecurity/trivy) and
 [Grype](https://github.com/anchore/grype). The environment is held constant on
 purpose, so the only variable is the base image — and the entire difference in
 image size and CVE count is attributable to the base OS.
 
-| File | Base | Has package manager? | Has shell? |
-|------|------|----------------------|------------|
-| [`Dockerfile.full`](Dockerfile.full) | `ubi9/ubi` | dnf | yes |
-| [`Dockerfile.minimal`](Dockerfile.minimal) | `ubi9/ubi-minimal` | microdnf | yes |
-| [`Dockerfile.micro`](Dockerfile.micro) | `ubi9/ubi-micro` | **none** | bash only |
+All three images **ship the pixi binary and run via `pixi run`** — they are real
+pixi containers, not just a baked environment. The "package manager" column below
+refers to the *OS* package manager (dnf/microdnf), which is what drives the
+base-OS attack surface:
+
+| File | Base | OS package manager | Shell | Ships pixi |
+|------|------|--------------------|-------|------------|
+| [`Dockerfile.full`](Dockerfile.full) | `ubi9/ubi` | dnf | yes | yes |
+| [`Dockerfile.minimal`](Dockerfile.minimal) | `ubi9/ubi-minimal` | microdnf | yes | yes |
+| [`Dockerfile.micro`](Dockerfile.micro) | `ubi9/ubi-micro` | **none** | bash only | yes |
 
 `Dockerfile.micro` is the recommended pattern: a full-UBI **builder** stage runs
-`dnf upgrade` and `pixi install`, then only the solved environment is `COPY`-ed
-into `ubi9-micro`. A conda-forge environment bundles its own Python, OpenSSL,
-libstdc++, etc., so it runs on a near-empty base — the only host dependency is
-glibc, which ubi-micro provides.
+`dnf upgrade` and `pixi install`, then the `pixi` binary and the solved
+environment are `COPY`-ed into `ubi9-micro`. Both are relocatable — a conda-forge
+environment bundles its own Python, OpenSSL, libstdc++, etc., and pixi is a single
+glibc-linked binary — so they run on a near-empty base. The only host dependency
+is glibc, which ubi-micro provides. What gets left behind is dnf and a few hundred
+base-OS RPMs, *not* pixi.
 
 ## Results
 
-Built `linux/arm64`, scanned with Trivy 0.69 and Grype (latest DB).
+Built `linux/arm64` with pixi 0.70.1, scanned with Trivy 0.69 and Grype (latest DB).
 
 ### Image size
 
 | Variant | Uncompressed size | OS (RPM) packages | Environment packages |
 |---------|------------------:|------------------:|---------------------:|
-| full    | 796 MB | 188 | 41 |
-| minimal | 659 MB | 112 | 41 |
-| micro   | **446 MB** | **22** | 41 |
+| full    | 803 MB | 188 | 41 |
+| minimal | 666 MB | 112 | 41 |
+| micro   | **511 MB** | **22** | 41 |
+
+Micro is ~36% smaller than the full base. (The pixi binary itself adds ~65 MB to
+each image but, as the scans below show, **zero** vulnerabilities.)
 
 ### Vulnerabilities
 
@@ -63,6 +73,8 @@ Two things worth understanding before you act on these numbers:
   the base does not touch them — you fix those by updating the environment. This
   is also why the two scanners disagree: they read different databases and match
   the interpreter differently. Run both.
+- **The pixi binary adds no findings.** Neither scanner flags the ~65 MB pixi
+  executable, so keeping pixi in the runtime image costs disk but not CVEs.
 
 Full per-CVE tables are checked in under [`.scan-results/`](.scan-results/).
 
