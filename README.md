@@ -98,6 +98,17 @@ Two things worth understanding before you act on these numbers:
 
 Full per-CVE tables are checked in under [`.scan-results/`](.scan-results/).
 
+### STIG / FIPS (a different axis)
+
+Red Hat also ships `ubi9/ubi-stig` (STIG-hardened full UBI).
+[`Dockerfile.stig`](Dockerfile.stig) builds pixi on it. STIG is about
+configuration hardening and FIPS, not image size, so it goes the *other* way:
+pixi-on-stig is 838 MB with 379 Trivy / 391 Grype findings (more than plain full,
+because hardening adds packages). And note the catch: a conda-forge environment
+bundles its own OpenSSL, so it does **not** inherit the base's FIPS posture
+(`hashlib.md5` still runs in the env). A STIG base alone does not make a pixi
+container FIPS-compliant.
+
 ## Usage
 
 ```bash
