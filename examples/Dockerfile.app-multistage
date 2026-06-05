@@ -1,0 +1,32 @@
+# syntax=docker/dockerfile:1
+#
+# Build a downstream app that needs an EXTRA dependency.
+#
+# You do NOT add packages on the slim runtime image. You add them on the full
+# base (which has the solver and network), then copy the updated environment into
+# ubi-micro. It is the same builder -> micro pattern as the base image, one level
+# up. The slim runtime stays slim.
+#
+# When you own the base image, the even cleaner option is to add the dependency
+# to pixi.toml and rebuild the base. Use this multi-stage form when the
+# dependency is specific to one downstream app.
+#
+#   docker build -f examples/Dockerfile.app-multistage -t pixi-ubi:app-rich .
+
+ARG BUILDER=pixi-ubi:full
+
+# ---- build: add the dependency on the full base ----
+FROM ${BUILDER} AS build
+WORKDIR /app
+# pixi add re-solves and updates pixi.toml + pixi.lock, then installs into the env.
+RUN pixi add rich
+COPY examples/richdemo.py /app/richdemo.py
+
+# ---- runtime: ship the updated env on ubi-micro ----
+FROM registry.access.redhat.com/ubi9/ubi-micro:latest
+WORKDIR /app
+COPY --from=build /root/.pixi/bin/pixi /usr/local/bin/pixi
+COPY --from=build /app/pixi.toml /app/pixi.lock /app/richdemo.py /app/
+COPY --from=build /app/.pixi/envs/default /app/.pixi/envs/default
+ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
+ENTRYPOINT ["python", "/app/richdemo.py"]
