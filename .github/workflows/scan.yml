@@ -1,7 +1,10 @@
 name: build-and-scan
 
-# Build all three pixi/UBI variants and scan them with Trivy and Grype so the
-# CVE comparison in the blog post is reproducible on every push.
+# Build every pixi/UBI variant and scan each with Trivy and Grype, then build and
+# smoke-test the example app images. Actions are pinned to commit SHAs. This is a
+# gate and a re-run of the comparison, not a byte-for-byte reproduction of the
+# committed .scan-results/ (those were generated locally on linux/arm64; CI runs
+# on amd64 and against a live vulnerability DB, so absolute counts will differ).
 
 on:
   push:
@@ -15,9 +18,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        variant: [full, minimal, micro]
+        variant: [full, minimal, micro, micro-patched, stig]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Build image
         run: docker build -f Dockerfile.${{ matrix.variant }} -t pixi-ubi:${{ matrix.variant }} .
@@ -26,16 +29,46 @@ jobs:
         run: docker run --rm pixi-ubi:${{ matrix.variant }}
 
       - name: Trivy scan
-        uses: aquasecurity/trivy-action@v0.36.0
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           image-ref: pixi-ubi:${{ matrix.variant }}
+          scanners: vuln
           format: table
-          severity: CRITICAL,HIGH,MEDIUM
+          severity: CRITICAL,HIGH,MEDIUM,LOW
+          output: trivy-${{ matrix.variant }}.txt
           exit-code: "0"
 
       - name: Grype scan
-        uses: anchore/scan-action@v7
+        uses: anchore/scan-action@e1165082ffb1fe366ebaf02d8526e7c4989ea9d2 # v7
         with:
           image: pixi-ubi:${{ matrix.variant }}
           fail-build: false
           output-format: table
+
+      - name: Upload Trivy report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: trivy-${{ matrix.variant }}
+          path: trivy-${{ matrix.variant }}.txt
+          if-no-files-found: warn
+
+  examples:
+    # The example images build FROM the published base tags, so build those first.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Build the base images the examples depend on
+        run: |
+          docker build -f Dockerfile.full  -t pixi-ubi:full  .
+          docker build -f Dockerfile.micro -t pixi-ubi:micro .
+
+      - name: app (COPY code onto micro)
+        run: |
+          docker build -f examples/Dockerfile.app --build-arg BASE=pixi-ubi:micro -t pixi-ubi:app .
+          docker run --rm pixi-ubi:app
+
+      - name: app-multistage (add a dependency, ship on micro)
+        run: |
+          docker build -f examples/Dockerfile.app-multistage --build-arg BUILDER=pixi-ubi:full -t pixi-ubi:app-rich .
+          docker run --rm pixi-ubi:app-rich

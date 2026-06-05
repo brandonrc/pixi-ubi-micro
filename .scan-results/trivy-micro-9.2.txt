@@ -1,0 +1,261 @@
+
+Report Summary
+
+┌────────────────────────────────────────────────────────────┬────────┬─────────────────┐
+│                           Target                           │  Type  │ Vulnerabilities │
+├────────────────────────────────────────────────────────────┼────────┼─────────────────┤
+│ registry.access.redhat.com/ubi9/ubi-micro:9.2 (redhat 9.2) │ redhat │       67        │
+└────────────────────────────────────────────────────────────┴────────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+registry.access.redhat.com/ubi9/ubi-micro:9.2 (redhat 9.2)
+==========================================================
+Total: 67 (UNKNOWN: 0, LOW: 19, MEDIUM: 41, HIGH: 7, CRITICAL: 0)
+
+┌────────────────────────┬────────────────┬──────────┬──────────┬────────────────────┬─────────────────────────┬──────────────────────────────────────────────────────────────┐
+│        Library         │ Vulnerability  │ Severity │  Status  │ Installed Version  │      Fixed Version      │                            Title                             │
+├────────────────────────┼────────────────┼──────────┼──────────┼────────────────────┼─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ coreutils-single       │ CVE-2025-5278  │ MEDIUM   │ affected │ 8.32-34.el9        │                         │ coreutils: Heap Buffer Under-Read in GNU Coreutils sort via  │
+│                        │                │          │          │                    │                         │ Key Specification                                            │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
+├────────────────────────┼────────────────┼──────────┼──────────┼────────────────────┼─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                  │ CVE-2024-2961  │ HIGH     │ fixed    │ 2.34-60.el9_2.7    │ 2.34-100.el9_4.2        │ glibc: Out of bounds write in iconv may lead to remote       │
+│                        │                │          │          │                    │                         │ code...                                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-2961                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33599 │          │          │                    │                         │ glibc: stack-based buffer overflow in netgroup cache         │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33599                   │
+│                        ├────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-4806  │ MEDIUM   │          │                    │ 2.34-100.el9            │ glibc: potential use-after-free in getaddrinfo()             │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-4806                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-4813  │          │          │                    │                         │ glibc: potential use-after-free in gaih_inet()               │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-4813                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33600 │          │          │                    │ 2.34-100.el9_4.2        │ glibc: null pointer dereferences after failed netgroup cache │
+│                        │                │          │          │                    │                         │ insertion                                                    │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33600                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-0395  │          │          │                    │ 2.34-125.el9_5.8        │ glibc: buffer overflow in the GNU C Library's assert()       │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-4802  │          │          │                    │ 2.34-168.el9_6.19       │ glibc: static setuid binary dlopen may incorrectly search    │
+│                        │                │          │          │                    │                         │ LD_LIBRARY_PATH                                              │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-5702  │          │          │                    │ 2.34-168.el9_6.20       │ glibc: Vector register overwrite bug in glibc                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-8058  │          │          │                    │ 2.34-168.el9_6.23       │ glibc: Double free in glibc                                  │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-8058                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-0915  │          │          │                    │ 2.34-231.el9_7.10       │ glibc: glibc: Information disclosure via zero-valued network │
+│                        │                │          │          │                    │                         │ query                                                        │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-0915                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4046  │          │          │                    │ 2.34-270.el9_8          │ glibc: glibc: Denial of Service via iconv() function with    │
+│                        │                │          │          │                    │                         │ specific character sets...                                   │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4046                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4437  │          │          │                    │                         │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
+│                        │                │          │          │                    │                         │ server response                                              │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                        ├────────────────┤          ├──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5435  │          │ affected │                    │                         │ glibc: glibc: Out-of-bounds write via TSIG record processing │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5435                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5450  │          │          │                    │                         │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                        │                │          │          │                    │                         │ format specifier and...                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5928  │          │          │                    │                         │ glibc: glibc: Information disclosure or denial of service    │
+│                        │                │          │          │                    │                         │ via ungetwc function with...                                 │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
+│                        ├────────────────┼──────────┼──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33601 │ LOW      │ fixed    │                    │ 2.34-100.el9_4.2        │ glibc: netgroup cache may terminate daemon on memory         │
+│                        │                │          │          │                    │                         │ allocation failure                                           │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33601                   │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33602 │          │          │                    │                         │ glibc: netgroup cache assumes NSS callback uses in-buffer    │
+│                        │                │          │          │                    │                         │ strings                                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33602                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-15281 │          │          │                    │ 2.34-231.el9_7.10       │ glibc: wordexp with WRDE_REUSE and WRDE_APPEND may return    │
+│                        │                │          │          │                    │                         │ uninitialized memory                                         │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-15281                   │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-0861  │          │          │                    │                         │ glibc: Integer overflow in memalign leads to heap corruption │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-0861                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4438  │          │          │                    │ 2.34-270.el9_8          │ glibc: glibc: Invalid DNS hostname returned via              │
+│                        │                │          │          │                    │                         │ gethostbyaddr functions                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4438                    │
+├────────────────────────┼────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-common           │ CVE-2024-2961  │ HIGH     │          │                    │ 2.34-100.el9_4.2        │ glibc: Out of bounds write in iconv may lead to remote       │
+│                        │                │          │          │                    │                         │ code...                                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-2961                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33599 │          │          │                    │                         │ glibc: stack-based buffer overflow in netgroup cache         │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33599                   │
+│                        ├────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-4806  │ MEDIUM   │          │                    │ 2.34-100.el9            │ glibc: potential use-after-free in getaddrinfo()             │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-4806                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-4813  │          │          │                    │                         │ glibc: potential use-after-free in gaih_inet()               │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-4813                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33600 │          │          │                    │ 2.34-100.el9_4.2        │ glibc: null pointer dereferences after failed netgroup cache │
+│                        │                │          │          │                    │                         │ insertion                                                    │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33600                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-0395  │          │          │                    │ 2.34-125.el9_5.8        │ glibc: buffer overflow in the GNU C Library's assert()       │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-4802  │          │          │                    │ 2.34-168.el9_6.19       │ glibc: static setuid binary dlopen may incorrectly search    │
+│                        │                │          │          │                    │                         │ LD_LIBRARY_PATH                                              │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-5702  │          │          │                    │ 2.34-168.el9_6.20       │ glibc: Vector register overwrite bug in glibc                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-8058  │          │          │                    │ 2.34-168.el9_6.23       │ glibc: Double free in glibc                                  │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-8058                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4046  │          │          │                    │ 2.34-270.el9_8          │ glibc: glibc: Denial of Service via iconv() function with    │
+│                        │                │          │          │                    │                         │ specific character sets...                                   │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4046                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4437  │          │          │                    │                         │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
+│                        │                │          │          │                    │                         │ server response                                              │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                        ├────────────────┤          ├──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5435  │          │ affected │                    │                         │ glibc: glibc: Out-of-bounds write via TSIG record processing │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5435                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5450  │          │          │                    │                         │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                        │                │          │          │                    │                         │ format specifier and...                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5928  │          │          │                    │                         │ glibc: glibc: Information disclosure or denial of service    │
+│                        │                │          │          │                    │                         │ via ungetwc function with...                                 │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
+│                        ├────────────────┼──────────┼──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33601 │ LOW      │ fixed    │                    │ 2.34-100.el9_4.2        │ glibc: netgroup cache may terminate daemon on memory         │
+│                        │                │          │          │                    │                         │ allocation failure                                           │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33601                   │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33602 │          │          │                    │                         │ glibc: netgroup cache assumes NSS callback uses in-buffer    │
+│                        │                │          │          │                    │                         │ strings                                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33602                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4438  │          │          │                    │ 2.34-270.el9_8          │ glibc: glibc: Invalid DNS hostname returned via              │
+│                        │                │          │          │                    │                         │ gethostbyaddr functions                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4438                    │
+├────────────────────────┼────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-minimal-langpack │ CVE-2024-2961  │ HIGH     │          │                    │ 2.34-100.el9_4.2        │ glibc: Out of bounds write in iconv may lead to remote       │
+│                        │                │          │          │                    │                         │ code...                                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-2961                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33599 │          │          │                    │                         │ glibc: stack-based buffer overflow in netgroup cache         │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33599                   │
+│                        ├────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-4806  │ MEDIUM   │          │                    │ 2.34-100.el9            │ glibc: potential use-after-free in getaddrinfo()             │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-4806                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-4813  │          │          │                    │                         │ glibc: potential use-after-free in gaih_inet()               │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-4813                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33600 │          │          │                    │ 2.34-100.el9_4.2        │ glibc: null pointer dereferences after failed netgroup cache │
+│                        │                │          │          │                    │                         │ insertion                                                    │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33600                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-0395  │          │          │                    │ 2.34-125.el9_5.8        │ glibc: buffer overflow in the GNU C Library's assert()       │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-0395                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-4802  │          │          │                    │ 2.34-168.el9_6.19       │ glibc: static setuid binary dlopen may incorrectly search    │
+│                        │                │          │          │                    │                         │ LD_LIBRARY_PATH                                              │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-4802                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-5702  │          │          │                    │ 2.34-168.el9_6.20       │ glibc: Vector register overwrite bug in glibc                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-5702                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2025-8058  │          │          │                    │ 2.34-168.el9_6.23       │ glibc: Double free in glibc                                  │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2025-8058                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4046  │          │          │                    │ 2.34-270.el9_8          │ glibc: glibc: Denial of Service via iconv() function with    │
+│                        │                │          │          │                    │                         │ specific character sets...                                   │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4046                    │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4437  │          │          │                    │                         │ glibc: glibc: Incorrect DNS response parsing via crafted DNS │
+│                        │                │          │          │                    │                         │ server response                                              │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4437                    │
+│                        ├────────────────┤          ├──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5435  │          │ affected │                    │                         │ glibc: glibc: Out-of-bounds write via TSIG record processing │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5435                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5450  │          │          │                    │                         │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                        │                │          │          │                    │                         │ format specifier and...                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5928  │          │          │                    │                         │ glibc: glibc: Information disclosure or denial of service    │
+│                        │                │          │          │                    │                         │ via ungetwc function with...                                 │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
+│                        ├────────────────┼──────────┼──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33601 │ LOW      │ fixed    │                    │ 2.34-100.el9_4.2        │ glibc: netgroup cache may terminate daemon on memory         │
+│                        │                │          │          │                    │                         │ allocation failure                                           │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33601                   │
+│                        ├────────────────┤          │          │                    │                         ├──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2024-33602 │          │          │                    │                         │ glibc: netgroup cache assumes NSS callback uses in-buffer    │
+│                        │                │          │          │                    │                         │ strings                                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2024-33602                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-4438  │          │          │                    │ 2.34-270.el9_8          │ glibc: glibc: Invalid DNS hostname returned via              │
+│                        │                │          │          │                    │                         │ gethostbyaddr functions                                      │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4438                    │
+├────────────────────────┼────────────────┼──────────┤          ├────────────────────┼─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcap                 │ CVE-2026-4878  │ HIGH     │          │ 2.48-9.el9_2       │ 2.48-10.el9_8.1         │ libcap: libcap: Privilege escalation via TOCTOU race         │
+│                        │                │          │          │                    │                         │ condition in cap_set_file()                                  │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2026-4878                    │
+├────────────────────────┼────────────────┼──────────┤          ├────────────────────┼─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcc                 │ CVE-2020-11023 │ MEDIUM   │          │ 11.3.1-4.3.el9     │ 11.5.0-5.el9_5          │ jquery: Untrusted code execution via <option> tag in HTML    │
+│                        │                │          │          │                    │                         │ passed to DOM...                                             │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2020-11023                   │
+│                        ├────────────────┼──────────┼──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2021-46195 │ LOW      │ affected │                    │                         │ gcc: uncontrolled recursion in libiberty/rust-demangle.c     │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2021-46195                   │
+│                        ├────────────────┤          │          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2022-27943 │          │          │                    │                         │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                        │                │          │          │                    │                         │ stack exhaustion in demangle_const                           │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
+├────────────────────────┼────────────────┼──────────┼──────────┼────────────────────┼─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base           │ CVE-2023-29491 │ MEDIUM   │ fixed    │ 6.2-8.20210508.el9 │ 6.2-10.20210508.el9     │ ncurses: Local users can trigger security-relevant memory    │
+│                        │                │          │          │                    │                         │ corruption via malformed data                                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                        ├────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2022-29458 │ LOW      │          │                    │ 6.2-10.20210508.el9_6.2 │ ncurses: segfaulting OOB read                                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+│                        ├────────────────┤          ├──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-50495 │          │ affected │                    │                         │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
+├────────────────────────┼────────────────┼──────────┼──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-libs           │ CVE-2023-29491 │ MEDIUM   │ fixed    │                    │ 6.2-10.20210508.el9     │ ncurses: Local users can trigger security-relevant memory    │
+│                        │                │          │          │                    │                         │ corruption via malformed data                                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                        ├────────────────┼──────────┤          │                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2022-29458 │ LOW      │          │                    │ 6.2-10.20210508.el9_6.2 │ ncurses: segfaulting OOB read                                │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+│                        ├────────────────┤          ├──────────┤                    ├─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2023-50495 │          │ affected │                    │                         │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
+├────────────────────────┼────────────────┤          │          ├────────────────────┼─────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                  │ CVE-2022-41409 │          │          │ 10.40-2.el9        │                         │ pcre2: negative repeat value in a pcre2test subject line     │
+│                        │                │          │          │                    │                         │ leads to inifinite...                                        │
+│                        │                │          │          │                    │                         │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
+├────────────────────────┤                │          │          │                    ├─────────────────────────┤                                                              │
+│ pcre2-syntax           │                │          │          │                    │                         │                                                              │
+│                        │                │          │          │                    │                         │                                                              │
+│                        │                │          │          │                    │                         │                                                              │
+└────────────────────────┴────────────────┴──────────┴──────────┴────────────────────┴─────────────────────────┴──────────────────────────────────────────────────────────────┘

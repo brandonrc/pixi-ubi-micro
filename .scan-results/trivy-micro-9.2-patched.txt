@@ -1,0 +1,78 @@
+
+Report Summary
+
+┌──────────────────────────────────────┬────────┬─────────────────┐
+│                Target                │  Type  │ Vulnerabilities │
+├──────────────────────────────────────┼────────┼─────────────────┤
+│ ubimicro92-patched-base (redhat 9.8) │ redhat │       16        │
+└──────────────────────────────────────┴────────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+ubimicro92-patched-base (redhat 9.8)
+====================================
+Total: 16 (UNKNOWN: 0, LOW: 6, MEDIUM: 10, HIGH: 0, CRITICAL: 0)
+
+┌────────────────────────┬────────────────┬──────────┬──────────┬─────────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│        Library         │ Vulnerability  │ Severity │  Status  │  Installed Version  │ Fixed Version │                            Title                             │
+├────────────────────────┼────────────────┼──────────┼──────────┼─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ coreutils-single       │ CVE-2025-5278  │ MEDIUM   │ affected │ 8.32-40.el9         │               │ coreutils: Heap Buffer Under-Read in GNU Coreutils sort via  │
+│                        │                │          │          │                     │               │ Key Specification                                            │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2025-5278                    │
+├────────────────────────┼────────────────┤          │          ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc                  │ CVE-2026-5435  │          │          │ 2.34-270.el9_8      │               │ glibc: glibc: Out-of-bounds write via TSIG record processing │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5435                    │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5450  │          │          │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                        │                │          │          │                     │               │ format specifier and...                                      │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5928  │          │          │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                        │                │          │          │                     │               │ via ungetwc function with...                                 │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
+├────────────────────────┼────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-common           │ CVE-2026-5435  │          │          │                     │               │ glibc: glibc: Out-of-bounds write via TSIG record processing │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5435                    │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5450  │          │          │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                        │                │          │          │                     │               │ format specifier and...                                      │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5928  │          │          │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                        │                │          │          │                     │               │ via ungetwc function with...                                 │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
+├────────────────────────┼────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ glibc-minimal-langpack │ CVE-2026-5435  │          │          │                     │               │ glibc: glibc: Out-of-bounds write via TSIG record processing │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5435                    │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5450  │          │          │                     │               │ glibc: glibc: Heap Buffer Overflow in `scanf` with `%mc`     │
+│                        │                │          │          │                     │               │ format specifier and...                                      │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5450                    │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2026-5928  │          │          │                     │               │ glibc: glibc: Information disclosure or denial of service    │
+│                        │                │          │          │                     │               │ via ungetwc function with...                                 │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2026-5928                    │
+├────────────────────────┼────────────────┼──────────┤          ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcc                 │ CVE-2021-46195 │ LOW      │          │ 11.5.0-14.el9       │               │ gcc: uncontrolled recursion in libiberty/rust-demangle.c     │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2021-46195                   │
+│                        ├────────────────┤          │          │                     ├───────────────┼──────────────────────────────────────────────────────────────┤
+│                        │ CVE-2022-27943 │          │          │                     │               │ binutils: libiberty/rust-demangle.c in GNU GCC 11.2 allows   │
+│                        │                │          │          │                     │               │ stack exhaustion in demangle_const                           │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2022-27943                   │
+├────────────────────────┼────────────────┤          │          ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base           │ CVE-2023-50495 │          │          │ 6.2-12.20210508.el9 │               │ ncurses: segmentation fault via _nc_wrap_entry()             │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2023-50495                   │
+├────────────────────────┤                │          │          │                     ├───────────────┤                                                              │
+│ ncurses-libs           │                │          │          │                     │               │                                                              │
+│                        │                │          │          │                     │               │                                                              │
+├────────────────────────┼────────────────┤          │          ├─────────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre2                  │ CVE-2022-41409 │          │          │ 10.40-6.el9         │               │ pcre2: negative repeat value in a pcre2test subject line     │
+│                        │                │          │          │                     │               │ leads to inifinite...                                        │
+│                        │                │          │          │                     │               │ https://avd.aquasec.com/nvd/cve-2022-41409                   │
+├────────────────────────┤                │          │          │                     ├───────────────┤                                                              │
+│ pcre2-syntax           │                │          │          │                     │               │                                                              │
+│                        │                │          │          │                     │               │                                                              │
+│                        │                │          │          │                     │               │                                                              │
+└────────────────────────┴────────────────┴──────────┴──────────┴─────────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘

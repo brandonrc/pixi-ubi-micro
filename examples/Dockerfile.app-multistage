@@ -19,13 +19,15 @@ ARG BUILDER=pixi-ubi:full
 FROM ${BUILDER} AS build
 WORKDIR /app
 # pixi add re-solves and updates pixi.toml + pixi.lock, then installs into the env.
+# For full reproducibility pin a version (pixi add "rich==X.Y") and commit the lock.
 RUN pixi add rich
 COPY examples/richdemo.py /app/richdemo.py
 
 # ---- runtime: ship the updated env on ubi-micro ----
+# The entrypoint calls the env's python directly, so this image does not need the
+# pixi binary at all -- we leave it behind in the builder and stay slimmer.
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
 WORKDIR /app
-COPY --from=build /root/.pixi/bin/pixi /usr/local/bin/pixi
 COPY --from=build /app/pixi.toml /app/pixi.lock /app/richdemo.py /app/
 COPY --from=build /app/.pixi/envs/default /app/.pixi/envs/default
 ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
