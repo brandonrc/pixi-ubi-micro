@@ -1,0 +1,369 @@
+NAME                         INSTALLED              FIXED IN                    TYPE    VULNERABILITY   SEVERITY    EPSS           RISK   
+tar                          2:1.34-11.el9          (won't fix)                 rpm     CVE-2005-2541   Medium      3.8% (88th)    2.3    
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2024-34459  Low         4.2% (88th)    1.8    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-1619   Low         2.9% (86th)    1.5    
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2024-11053  Low         1.4% (80th)    0.6    
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2024-11053  Low         1.4% (80th)    0.6    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2182   Low         0.7% (71st)    0.4    
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2024-7264   Low         0.8% (74th)    0.3    
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2024-7264   Low         0.8% (74th)    0.3    
+openssl                      1:3.5.5-3.el9_8        (won't fix)                 rpm     CVE-2024-41996  Low         0.6% (71st)    0.3    
+openssl-libs                 1:3.5.5-3.el9_8        (won't fix)                 rpm     CVE-2024-41996  Low         0.6% (71st)    0.3    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-1620   Low         0.5% (67th)    0.3    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-4173   Low         0.5% (65th)    0.3    
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2024-9681   Low         0.7% (73rd)    0.3    
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2024-9681   Low         0.7% (73rd)    0.3    
+vim-minimal                  2:8.2.2637-26.el9_8.5  (won't fix)                 rpm     CVE-2022-1720   Low         0.5% (67th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-3968   Low         0.8% (74th)    0.2    
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2025-1795   Low         0.8% (73rd)    0.2    
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2025-1795   Low         0.8% (73rd)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3705   Low         0.5% (63rd)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-3973   Low         0.4% (58th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2343   Low         0.4% (58th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-1674   Low         0.4% (63rd)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2183   Low         0.6% (69th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-4166   Low         0.4% (59th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-4292   Low         0.3% (55th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2175   Low         0.3% (54th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2845   Low         0.5% (67th)    0.2    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-4187   Low         0.3% (52nd)    0.1    
+python                       3.12.13                                            binary  CVE-2026-6100   Critical    0.2% (37th)    0.1    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-4136   Low         0.3% (53rd)    0.1    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-4293   Low         0.3% (54th)    0.1    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-3927   Low         0.3% (48th)    0.1    
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2026-4426   Medium      0.2% (40th)    0.1    
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2025-4516   Medium      0.2% (43rd)    0.1    
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2025-4516   Medium      0.2% (43rd)    0.1    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2285   Low         0.2% (41st)    0.1    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2129   Low         0.2% (40th)    0.1    
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-0672   Medium      0.2% (42nd)    0.1    
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-0672   Medium      0.2% (42nd)    0.1    
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2125   Low         0.2% (39th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2124   Low         0.2% (38th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2286   Low         0.2% (38th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2126   Low         0.2% (38th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2042   Low         0.2% (37th)    < 0.1  
+python3-pip-wheel            21.3.1-2.el9_8                                     rpm     CVE-2021-3572   Low         0.2% (47th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-1616   Low         0.2% (37th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-41411  Medium      0.1% (34th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-22667  Low         0.2% (35th)    < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2023-32636  Low         0.2% (37th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2206   Low         0.1% (33rd)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2284   Low         0.1% (33rd)    < 0.1  
+libgcc                       11.5.0-14.el9                                      rpm     CVE-2021-46195  Low         0.2% (46th)    < 0.1  
+libgomp                      11.5.0-14.el9                                      rpm     CVE-2021-46195  Low         0.2% (46th)    < 0.1  
+libstdc++                    11.5.0-14.el9                                      rpm     CVE-2021-46195  Low         0.2% (46th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-0213   Low         0.1% (35th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2210   Low         0.1% (31st)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2946   Low         0.1% (31st)    < 0.1  
+coreutils-single             8.32-40.el9                                        rpm     CVE-2025-5278   Medium      0.1% (33rd)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-3974   Low         0.2% (43rd)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2862   Low         0.1% (29th)    < 0.1  
+python                       3.12.13                                            binary  CVE-2026-3298   High        < 0.1% (22nd)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2304   Low         0.1% (28th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2207   Low         0.1% (28th)    < 0.1  
+python                       3.12.13                3.15.0a6                    binary  CVE-2025-15366  Medium      0.1% (28th)    < 0.1  
+python                       3.12.13                3.15.0a6                    binary  CVE-2025-15367  Medium      0.1% (28th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3099   Low         0.1% (27th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2257   Low         < 0.1% (26th)  < 0.1  
+python                       3.12.13                                            binary  CVE-2026-7210   Critical    < 0.1% (19th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48706  Low         0.1% (32nd)    < 0.1  
+openssl                      1:3.5.5-3.el9_8                                    rpm     CVE-2026-28389  Low         0.1% (29th)    < 0.1  
+openssl-libs                 1:3.5.5-3.el9_8                                    rpm     CVE-2026-28389  Low         0.1% (29th)    < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2026-6732   Medium      < 0.1% (24th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2025-29768  Medium      0.1% (28th)    < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69650  Low         0.2% (35th)    < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2026-0990   Medium      < 0.1% (25th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-41957  Low         0.1% (31st)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2287   Low         < 0.1% (24th)  < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2025-5915   Low         < 0.1% (25th)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-1965   Medium      < 0.1% (22nd)  < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-1965   Medium      < 0.1% (22nd)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3324   Low         < 0.1% (23rd)  < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2025-3360   Low         0.1% (31st)    < 0.1  
+python3-pip-wheel            21.3.1-2.el9_8                                     rpm     CVE-2025-50181  Medium      < 0.1% (23rd)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-7168   Medium      < 0.1% (23rd)  < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-7168   Medium      < 0.1% (23rd)  < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2025-5918   Low         0.1% (29th)    < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2025-15224  Low         < 0.1% (26th)  < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2025-15224  Low         < 0.1% (26th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2025-24014  Low         0.1% (27th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3296   Low         < 0.1% (21st)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-66863  Low         0.1% (30th)    < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-66865  Low         0.1% (30th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2208   Low         0.1% (30th)    < 0.1  
+glibc                        2.34-270.el9_8                                     rpm     CVE-2026-5450   Medium      < 0.1% (22nd)  < 0.1  
+glibc-common                 2.34-270.el9_8                                     rpm     CVE-2026-5450   Medium      < 0.1% (22nd)  < 0.1  
+glibc-minimal-langpack       2.34-270.el9_8                                     rpm     CVE-2026-5450   Medium      < 0.1% (22nd)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-5245   Medium      < 0.1% (23rd)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2025-22134  Low         0.1% (27th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2849   Low         0.1% (31st)    < 0.1  
+libtasn1                     4.16.0-9.el9                                       rpm     CVE-2025-13151  Low         < 0.1% (23rd)  < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2025-5916   Low         0.1% (27th)    < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3235   Low         < 0.1% (20th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2982   Low         < 0.1% (19th)  < 0.1  
+glibc                        2.34-270.el9_8                                     rpm     CVE-2026-5928   Medium      < 0.1% (21st)  < 0.1  
+glibc-common                 2.34-270.el9_8                                     rpm     CVE-2026-5928   Medium      < 0.1% (21st)  < 0.1  
+glibc-minimal-langpack       2.34-270.el9_8                                     rpm     CVE-2026-5928   Medium      < 0.1% (21st)  < 0.1  
+python3-pip-wheel            21.3.1-2.el9_8                                     rpm     CVE-2025-50182  Medium      < 0.1% (20th)  < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2025-5917   Low         0.1% (30th)    < 0.1  
+python3-pip-wheel            21.3.1-2.el9_8                                     rpm     CVE-2026-32284  Medium      < 0.1% (19th)  < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-3644   Medium      < 0.1% (19th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-41965  Low         < 0.1% (26th)  < 0.1  
+tpm2-tss                     3.2.3-1.el9                                        rpm     CVE-2024-29040  Medium      < 0.1% (21st)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3234   Low         < 0.1% (19th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3297   Low         < 0.1% (19th)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-7210   Medium      < 0.1% (19th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-7210   Medium      < 0.1% (19th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2817   Low         < 0.1% (18th)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-3644   Medium      < 0.1% (19th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-3644   Medium      < 0.1% (19th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3037   Low         < 0.1% (18th)  < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2023-45322  Low         < 0.1% (21st)  < 0.1  
+libsolv                      0.7.24-5.el9_8                                     rpm     CVE-2026-9149   Medium      < 0.1% (17th)  < 0.1  
+xz-libs                      5.2.5-8.el9_0                                      rpm     CVE-2026-34743  Medium      < 0.1% (18th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3256   Low         < 0.1% (18th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-43802  Low         < 0.1% (23rd)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-43374  Low         < 0.1% (26th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2344   Low         < 0.1% (17th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2889   Low         < 0.1% (17th)  < 0.1  
+openssl                      1:3.5.5-3.el9_8                                    rpm     CVE-2024-13176  Low         < 0.1% (22nd)  < 0.1  
+openssl-libs                 1:3.5.5-3.el9_8                                    rpm     CVE-2024-13176  Low         < 0.1% (22nd)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-0351   Low         < 0.1% (19th)  < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2025-27113  Low         < 0.1% (26th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2980   Low         < 0.1% (20th)  < 0.1  
+python                       3.12.13                3.14.5                      binary  CVE-2026-8328   Medium      < 0.1% (16th)  < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-4224   Medium      < 0.1% (15th)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-4224   Medium      < 0.1% (15th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-4224   Medium      < 0.1% (15th)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-66862  Low         < 0.1% (24th)  < 0.1  
+glibc                        2.34-270.el9_8                                     rpm     CVE-2026-5435   Medium      < 0.1% (15th)  < 0.1  
+glibc-common                 2.34-270.el9_8                                     rpm     CVE-2026-5435   Medium      < 0.1% (15th)  < 0.1  
+glibc-minimal-langpack       2.34-270.el9_8                                     rpm     CVE-2026-5435   Medium      < 0.1% (15th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2021-3928   Low         < 0.1% (16th)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2025-15079  Low         < 0.1% (14th)  < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2025-15079  Low         < 0.1% (14th)  < 0.1  
+python3-pip-wheel            21.3.1-2.el9_8                                     rpm     CVE-2023-45803  Medium      < 0.1% (17th)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2025-15282  Medium      < 0.1% (16th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2025-15282  Medium      < 0.1% (16th)  < 0.1  
+python                       3.12.13                                            binary  CVE-2025-12781  Medium      < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3016   Low         < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-4141   Low         < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-4751   Low         < 0.1% (14th)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-1153   Low         < 0.1% (24th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-26269  Low         < 0.1% (15th)  < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2025-7039   Low         < 0.1% (22nd)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-6019   Medium      < 0.1% (13th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-6019   Medium      < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3134   Low         < 0.1% (14th)  < 0.1  
+ncurses-base                 6.2-12.20210508.el9                                rpm     CVE-2023-50495  Low         < 0.1% (16th)  < 0.1  
+ncurses-libs                 6.2-12.20210508.el9                                rpm     CVE-2023-50495  Low         < 0.1% (16th)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2025-12781  Medium      < 0.1% (14th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2025-12781  Medium      < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-47814  Low         < 0.1% (21st)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-0433   Low         < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-5344   Low         < 0.1% (18th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2345   Low         < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-1127   Low         < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3278   Low         < 0.1% (17th)  < 0.1  
+openssl-fips-provider        3.0.7-8.el9                                        rpm     CVE-2026-31790  Medium      < 0.1% (13th)  < 0.1  
+openssl-fips-provider-so     3.0.7-8.el9                                        rpm     CVE-2026-31790  Medium      < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2522   Low         < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-1170   Low         < 0.1% (17th)  < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2025-11468  Medium      < 0.1% (14th)  < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2025-11468  Medium      < 0.1% (14th)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-5545   Medium      < 0.1% (11th)  < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-5545   Medium      < 0.1% (11th)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-66864  Low         < 0.1% (20th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-0049   Low         < 0.1% (12th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-4738   Low         < 0.1% (11th)  < 0.1  
+pcre2                        10.40-6.el9                                        rpm     CVE-2022-41409  Low         < 0.1% (15th)  < 0.1  
+pcre2-syntax                 10.40-6.el9                                        rpm     CVE-2022-41409  Low         < 0.1% (15th)  < 0.1  
+openssl                      1:3.5.5-3.el9_8                                    rpm     CVE-2026-28388  Low         < 0.1% (14th)  < 0.1  
+openssl-libs                 1:3.5.5-3.el9_8                                    rpm     CVE-2026-28388  Low         < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-0512   Low         < 0.1% (11th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2819   Low         < 0.1% (11th)  < 0.1  
+libgcc                       11.5.0-14.el9                                      rpm     CVE-2022-27943  Low         < 0.1% (14th)  < 0.1  
+libgomp                      11.5.0-14.el9                                      rpm     CVE-2022-27943  Low         < 0.1% (14th)  < 0.1  
+libstdc++                    11.5.0-14.el9                                      rpm     CVE-2022-27943  Low         < 0.1% (14th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-4734   Low         < 0.1% (11th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48232  Low         < 0.1% (16th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48233  Low         < 0.1% (16th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48237  Low         < 0.1% (16th)  < 0.1  
+openssl                      1:3.5.5-3.el9_8                                    rpm     CVE-2025-9232   Low         < 0.1% (19th)  < 0.1  
+openssl-libs                 1:3.5.5-3.el9_8                                    rpm     CVE-2025-9232   Low         < 0.1% (19th)  < 0.1  
+python                       3.12.13                                            binary  CVE-2026-6019   Medium      < 0.1% (13th)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2025-14524  Low         < 0.1% (12th)  < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2025-14524  Low         < 0.1% (12th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48231  Low         < 0.1% (16th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2024-45306  Low         < 0.1% (15th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-1725   Low         < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-1175   Low         < 0.1% (13th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-0288   Low         < 0.1% (10th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-0051   Low         < 0.1% (9th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-3805   Medium      < 0.1% (8th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-3805   Medium      < 0.1% (8th)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2025-13837  Medium      < 0.1% (9th)   < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2025-13837  Medium      < 0.1% (9th)   < 0.1  
+sqlite-libs                  3.34.1-10.el9_8                                    rpm     CVE-2025-70873  Low         < 0.1% (16th)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69649  Low         < 0.1% (16th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48235  Low         < 0.1% (14th)  < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-3446   Medium      < 0.1% (8th)   < 0.1  
+openldap                     2.6.8-4.el9                                        rpm     CVE-2026-22185  Medium      < 0.1% (8th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-1264   Low         < 0.1% (11th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2923   Low         < 0.1% (11th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-4781   Low         < 0.1% (8th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11081  Medium      < 0.1% (9th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-6253   Medium      < 0.1% (8th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-6253   Medium      < 0.1% (8th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-1151   Low         < 0.1% (15th)  < 0.1  
+python                       3.12.13                                            binary  CVE-2026-4786   High        < 0.1% (6th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3352   Low         < 0.1% (8th)   < 0.1  
+gnupg2                       2.3.3-5.el9_7                                      rpm     CVE-2025-30258  Low         < 0.1% (16th)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-1150   Low         < 0.1% (15th)  < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-1152   Low         < 0.1% (15th)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-3784   Medium      < 0.1% (7th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-3784   Medium      < 0.1% (7th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48236  Low         < 0.1% (12th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-48234  Low         < 0.1% (11th)  < 0.1  
+gawk                         5.1.0-6.el9                                        rpm     CVE-2023-4156   Low         < 0.1% (9th)   < 0.1  
+tar                          2:1.34-11.el9                                      rpm     CVE-2026-5704   Medium      < 0.1% (8th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-4735   Low         < 0.1% (8th)   < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2025-60753  Medium      < 0.1% (7th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-3153   Low         < 0.1% (9th)   < 0.1  
+python                       3.12.13                *3.13.10, 3.14.1, 3.15.0a3  binary  CVE-2025-13837  Medium      < 0.1% (9th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11083  Medium      < 0.1% (7th)   < 0.1  
+openssl                      1:3.5.5-3.el9_8        (won't fix)                 rpm     CVE-2026-2673   Medium      < 0.1% (6th)   < 0.1  
+openssl-fips-provider        3.0.7-8.el9                                        rpm     CVE-2026-2673   Medium      < 0.1% (6th)   < 0.1  
+openssl-fips-provider-so     3.0.7-8.el9                                        rpm     CVE-2026-2673   Medium      < 0.1% (6th)   < 0.1  
+openssl-libs                 1:3.5.5-3.el9_8        (won't fix)                 rpm     CVE-2026-2673   Medium      < 0.1% (6th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-0054   Low         < 0.1% (7th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-3783   Medium      < 0.1% (7th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-3783   Medium      < 0.1% (7th)   < 0.1  
+python                       3.12.13                                            binary  CVE-2026-1502   Medium      < 0.1% (6th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2022-2874   Low         < 0.1% (9th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-5441   Low         < 0.1% (9th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11082  Medium      < 0.1% (6th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-6429   Medium      < 0.1% (6th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-6429   Medium      < 0.1% (6th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11494  Low         < 0.1% (11th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2025-1215   Low         < 0.1% (12th)  < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2025-6170   Low         < 0.1% (12th)  < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2025-26603  Low         < 0.1% (9th)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-1502   Medium      < 0.1% (6th)   < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-1502   Medium      < 0.1% (6th)   < 0.1  
+tar                          2:1.34-11.el9                                      rpm     CVE-2023-39804  Low         < 0.1% (10th)  < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-5773   Medium      < 0.1% (5th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-5773   Medium      < 0.1% (5th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-2609   Low         < 0.1% (7th)   < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2026-1489   Medium      < 0.1% (5th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11413  Low         < 0.1% (8th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-46483  Medium      < 0.1% (4th)   < 0.1  
+gnupg2                       2.3.3-5.el9_7                                      rpm     CVE-2022-3219   Low         < 0.1% (6th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11840  Low         < 0.1% (9th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2026-6844   Medium      < 0.1% (5th)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-5713   Medium      < 0.1% (5th)   < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-5713   Medium      < 0.1% (5th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5  (won't fix)                 rpm     CVE-2023-5535   Low         < 0.1% (9th)   < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2026-0988   Low         < 0.1% (8th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11412  Low         < 0.1% (8th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11414  Low         < 0.1% (8th)   < 0.1  
+libsolv                      0.7.24-5.el9_8                                     rpm     CVE-2026-48864  Medium      < 0.1% (2nd)   < 0.1  
+tar                          2:1.34-11.el9                                      rpm     CVE-2026-33056  Medium      < 0.1% (5th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2023-2610   Low         < 0.1% (6th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11495  Low         < 0.1% (8th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-3198   Low         < 0.1% (8th)   < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2026-1484   Medium      < 0.1% (5th)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-42308  Medium      < 0.1% (3rd)   < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-42308  Medium      < 0.1% (3rd)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2026-45186  High        < 0.1% (1st)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-11839  Low         < 0.1% (7th)   < 0.1  
+elfutils-default-yama-scope  0.194-1.el9                                        rpm     CVE-2025-1371   Low         < 0.1% (7th)   < 0.1  
+elfutils-libelf              0.194-1.el9                                        rpm     CVE-2025-1371   Low         < 0.1% (7th)   < 0.1  
+elfutils-libs                0.194-1.el9                                        rpm     CVE-2025-1371   Low         < 0.1% (7th)   < 0.1  
+libsolv                      0.7.24-5.el9_8                                     rpm     CVE-2026-9150   Medium      < 0.1% (2nd)   < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2026-0989   Low         < 0.1% (7th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69647  Low         < 0.1% (7th)   < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2025-1632   Low         < 0.1% (7th)   < 0.1  
+libarchive                   3.5.3-9.el9_7          (won't fix)                 rpm     CVE-2023-30571  Medium      < 0.1% (3rd)   < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2026-0992   Low         < 0.1% (7th)   < 0.1  
+gnupg2                       2.3.3-5.el9_7                                      rpm     CVE-2026-24883  Low         < 0.1% (6th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-66861  Low         < 0.1% (6th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69648  Low         < 0.1% (6th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69652  Low         < 0.1% (6th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-4873   Medium      < 0.1% (2nd)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-4873   Medium      < 0.1% (2nd)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2024-57360  Low         < 0.1% (5th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2025-13034  Medium      < 0.1% (1st)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2025-13034  Medium      < 0.1% (1st)   < 0.1  
+sqlite-libs                  3.34.1-10.el9_8                                    rpm     CVE-2024-0232   Low         < 0.1% (4th)   < 0.1  
+libblkid                     2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+libfdisk                     2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+libmount                     2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+libsmartcols                 2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+libuuid                      2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+util-linux                   2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+util-linux-core              2.37.4-25.el9                                      rpm     CVE-2026-27456  Medium      < 0.1% (2nd)   < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-4519   Low         < 0.1% (3rd)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-66866  Low         < 0.1% (5th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2022-47010  Low         < 0.1% (2nd)   < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a7  binary  CVE-2026-2297   Medium      < 0.1% (1st)   < 0.1  
+systemd                      252-67.el9_8.2                                     rpm     CVE-2026-4105   Medium      < 0.1% (1st)   < 0.1  
+systemd-libs                 252-67.el9_8.2                                     rpm     CVE-2026-4105   Medium      < 0.1% (1st)   < 0.1  
+systemd-pam                  252-67.el9_8.2                                     rpm     CVE-2026-4105   Medium      < 0.1% (1st)   < 0.1  
+systemd-rpm-macros           252-67.el9_8.2                                     rpm     CVE-2026-4105   Medium      < 0.1% (1st)   < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2025-13462  Low         < 0.1% (6th)   < 0.1  
+libxml2                      2.9.13-14.el9_7                                    rpm     CVE-2026-1757   Medium      < 0.1% (0th)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-3479   Low         < 0.1% (3rd)   < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-3479   Low         < 0.1% (3rd)   < 0.1  
+elfutils-default-yama-scope  0.194-1.el9                                        rpm     CVE-2024-25260  Low         < 0.1% (2nd)   < 0.1  
+elfutils-libelf              0.194-1.el9                                        rpm     CVE-2024-25260  Low         < 0.1% (2nd)   < 0.1  
+elfutils-libs                0.194-1.el9                                        rpm     CVE-2024-25260  Low         < 0.1% (2nd)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5  (won't fix)                 rpm     CVE-2023-46246  Low         < 0.1% (2nd)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-39881  Medium      < 0.1% (0th)   < 0.1  
+libgcrypt                    1.10.0-11.el9                                      rpm     CVE-2026-41989  Medium      < 0.1% (0th)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2026-41080  Low         < 0.1% (2nd)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2026-6276   Low         < 0.1% (2nd)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2026-6276   Low         < 0.1% (2nd)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2022-47007  Low         < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2022-47011  Low         < 0.1% (0th)   < 0.1  
+glib2                        2.68.4-19.el9_8.1                                  rpm     CVE-2026-1485   Low         < 0.1% (2nd)   < 0.1  
+elfutils-default-yama-scope  0.194-1.el9                                        rpm     CVE-2025-1377   Low         < 0.1% (1st)   < 0.1  
+elfutils-libelf              0.194-1.el9                                        rpm     CVE-2025-1377   Low         < 0.1% (1st)   < 0.1  
+elfutils-libs                0.194-1.el9                                        rpm     CVE-2025-1377   Low         < 0.1% (1st)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-2297   Low         < 0.1% (1st)   < 0.1  
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-2297   Low         < 0.1% (1st)   < 0.1  
+sed                          4.8-10.el9                                         rpm     CVE-2026-5958   Medium      < 0.1% (0th)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2026-32776  Medium      < 0.1% (0th)   < 0.1  
+libarchive                   3.5.3-9.el9_7                                      rpm     CVE-2026-5745   Medium      < 0.1% (0th)   < 0.1  
+openssl                      1:3.5.5-3.el9_8                                    rpm     CVE-2026-31789  Low         < 0.1% (0th)   < 0.1  
+openssl-libs                 1:3.5.5-3.el9_8                                    rpm     CVE-2026-31789  Low         < 0.1% (0th)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2026-32778  Medium      < 0.1% (0th)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2025-66382  Low         < 0.1% (1st)   < 0.1  
+zlib                         1.2.11-40.el9                                      rpm     CVE-2026-27171  Low         < 0.1% (0th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-28420  Medium      < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2026-4647   Medium      < 0.1% (0th)   < 0.1  
+elfutils-default-yama-scope  0.194-1.el9                                        rpm     CVE-2025-1376   Low         < 0.1% (1st)   < 0.1  
+elfutils-libelf              0.194-1.el9                                        rpm     CVE-2025-1376   Low         < 0.1% (1st)   < 0.1  
+elfutils-libs                0.194-1.el9                                        rpm     CVE-2025-1376   Low         < 0.1% (1st)   < 0.1  
+gnupg2                       2.3.3-5.el9_7                                      rpm     CVE-2025-68972  Medium      < 0.1% (0th)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2026-32777  Medium      < 0.1% (0th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-28419  Medium      < 0.1% (0th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-28418  Medium      < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2026-6845   Medium      < 0.1% (0th)   < 0.1  
+python3-pip-wheel            21.3.1-2.el9_8                                     rpm     CVE-2026-25645  Medium      < 0.1% (0th)   < 0.1  
+tar                          2:1.34-11.el9                                      rpm     CVE-2025-64118  Medium      < 0.1% (0th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-45130  Medium      < 0.1% (0th)   < 0.1  
+libgcrypt                    1.10.0-11.el9                                      rpm     CVE-2026-41990  Low         < 0.1% (0th)   < 0.1  
+expat                        2.5.0-6.el9_8.1                                    rpm     CVE-2026-24515  Low         < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69644  Low         < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69645  Low         < 0.1% (0th)   < 0.1  
+curl-minimal                 7.76.1-40.el9                                      rpm     CVE-2025-14017  Medium      < 0.1% (0th)   < 0.1  
+libcurl-minimal              7.76.1-40.el9                                      rpm     CVE-2025-14017  Medium      < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69646  Low         < 0.1% (0th)   < 0.1  
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2025-69651  Low         < 0.1% (0th)   < 0.1  
+vim-minimal                  2:8.2.2637-26.el9_8.5                              rpm     CVE-2026-28422  Low         < 0.1% (0th)   < 0.1  
+python                       3.12.13                *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-3479   Negligible  < 0.1% (3rd)   < 0.1  
+python3                      3.9.25-7.el9_8                                     rpm     CVE-2026-3276   Medium      N/A            N/A    
+python3-libs                 3.9.25-7.el9_8                                     rpm     CVE-2026-3276   Medium      N/A            N/A    
+gdb-gdbserver                16.3-3.el9                                         rpm     CVE-2023-2222   Negligible  N/A            N/A

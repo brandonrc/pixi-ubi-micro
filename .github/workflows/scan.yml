@@ -1,0 +1,41 @@
+name: build-and-scan
+
+# Build all three pixi/UBI variants and scan them with Trivy and Grype so the
+# CVE comparison in the blog post is reproducible on every push.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [full, minimal, micro]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -f Dockerfile.${{ matrix.variant }} -t pixi-ubi:${{ matrix.variant }} .
+
+      - name: Smoke test (the app must actually run)
+        run: docker run --rm pixi-ubi:${{ matrix.variant }}
+
+      - name: Trivy scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: pixi-ubi:${{ matrix.variant }}
+          format: table
+          severity: CRITICAL,HIGH,MEDIUM
+          exit-code: "0"
+
+      - name: Grype scan
+        uses: anchore/scan-action@v4
+        with:
+          image: pixi-ubi:${{ matrix.variant }}
+          fail-build: false
+          output-format: table

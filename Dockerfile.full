@@ -1,0 +1,29 @@
+# syntax=docker/dockerfile:1
+#
+# "Before" image: a single stage on the FULL UBI9 base.
+#
+# Build tooling, pixi, the OS package manager (dnf), and the solved
+# environment all end up in the final image. It works and it is simple,
+# but it is large and carries the full base-OS attack surface.
+
+FROM registry.access.redhat.com/ubi9/ubi:latest
+
+# Apply the latest security errata to the base OS packages.
+RUN dnf -y upgrade && dnf clean all && rm -rf /var/cache/dnf
+
+# Install a pinned pixi (the installer reads PIXI_VERSION from the env).
+ENV PIXI_VERSION=0.66.0
+RUN curl -fsSL https://pixi.sh/install.sh | bash
+ENV PATH="/root/.pixi/bin:${PATH}"
+
+WORKDIR /app
+COPY pixi.toml pixi.lock ./
+COPY main.py ./
+
+# Solve + materialize the environment in place from the lockfile.
+RUN pixi install --locked
+
+# pixi (and dnf) are only needed at build time. At runtime we just need the
+# environment on PATH -- the same activation the micro image uses.
+ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
+ENTRYPOINT ["python", "main.py"]

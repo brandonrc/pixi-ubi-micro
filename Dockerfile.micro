@@ -1,0 +1,37 @@
+# syntax=docker/dockerfile:1
+#
+# Production image: do ALL the work on the full UBI9 base, then copy only
+# the solved environment into ubi9-micro -- which has no package manager
+# and no shell.
+#
+# A conda-forge environment is self-contained (it bundles its own Python,
+# libstdc++, OpenSSL, etc.), so it runs fine on a near-empty base. The only
+# host dependency is glibc, which ubi-micro provides.
+
+# ---- builder: the full UBI base does the heavy lifting ----
+FROM registry.access.redhat.com/ubi9/ubi:latest AS builder
+
+RUN dnf -y upgrade && dnf clean all && rm -rf /var/cache/dnf
+
+ENV PIXI_VERSION=0.66.0
+RUN curl -fsSL https://pixi.sh/install.sh | bash
+ENV PATH="/root/.pixi/bin:${PATH}"
+
+WORKDIR /app
+COPY pixi.toml pixi.lock ./
+COPY main.py ./
+RUN pixi install --locked
+
+# ---- runtime: ubi9-micro receives only the environment ----
+FROM registry.access.redhat.com/ubi9/ubi-micro:latest
+
+WORKDIR /app
+COPY --from=builder /app/.pixi/envs/default /app/.pixi/envs/default
+COPY --from=builder /app/main.py /app/main.py
+
+# ubi-micro has no shell, so we cannot source an activation script.
+# Putting the environment's bin directory on PATH is enough: the interpreter
+# resolves its own shared libraries via rpath, independent of the OS.
+ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
+
+ENTRYPOINT ["python", "main.py"]

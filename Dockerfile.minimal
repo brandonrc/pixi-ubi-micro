@@ -1,0 +1,28 @@
+# syntax=docker/dockerfile:1
+#
+# Middle ground: ubi9-minimal.
+#
+# Uses microdnf and ships far fewer packages than the full base, but still
+# contains a package manager and a shell. A reasonable compromise when you
+# need to install or debug things inside the running container.
+
+FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
+
+# microdnf is the slimmed-down package manager on ubi-minimal.
+# tar is required by the pixi installer to unpack the release tarball.
+RUN microdnf -y upgrade \
+    && microdnf -y install tar gzip \
+    && microdnf clean all
+
+ENV PIXI_VERSION=0.66.0
+RUN curl -fsSL https://pixi.sh/install.sh | bash
+ENV PATH="/root/.pixi/bin:${PATH}"
+
+WORKDIR /app
+COPY pixi.toml pixi.lock ./
+COPY main.py ./
+RUN pixi install --locked
+
+# pixi (and microdnf) are only needed at build time; put the env on PATH.
+ENV PATH="/app/.pixi/envs/default/bin:${PATH}"
+ENTRYPOINT ["python", "main.py"]

@@ -1,0 +1,35 @@
+NAME                    INSTALLED            FIXED IN                    TYPE    VULNERABILITY   SEVERITY    EPSS           RISK   
+python                  3.12.13                                          binary  CVE-2026-6100   Critical    0.2% (37th)    0.1    
+libgcc                  11.5.0-14.el9                                    rpm     CVE-2021-46195  Low         0.2% (46th)    < 0.1  
+coreutils-single        8.32-40.el9                                      rpm     CVE-2025-5278   Medium      0.1% (33rd)    < 0.1  
+python                  3.12.13                                          binary  CVE-2026-3298   High        < 0.1% (22nd)  < 0.1  
+python                  3.12.13              3.15.0a6                    binary  CVE-2025-15366  Medium      0.1% (28th)    < 0.1  
+python                  3.12.13              3.15.0a6                    binary  CVE-2025-15367  Medium      0.1% (28th)    < 0.1  
+python                  3.12.13                                          binary  CVE-2026-7210   Critical    < 0.1% (19th)  < 0.1  
+glibc                   2.34-270.el9_8                                   rpm     CVE-2026-5450   Medium      < 0.1% (22nd)  < 0.1  
+glibc-common            2.34-270.el9_8                                   rpm     CVE-2026-5450   Medium      < 0.1% (22nd)  < 0.1  
+glibc-minimal-langpack  2.34-270.el9_8                                   rpm     CVE-2026-5450   Medium      < 0.1% (22nd)  < 0.1  
+glibc                   2.34-270.el9_8                                   rpm     CVE-2026-5928   Medium      < 0.1% (21st)  < 0.1  
+glibc-common            2.34-270.el9_8                                   rpm     CVE-2026-5928   Medium      < 0.1% (21st)  < 0.1  
+glibc-minimal-langpack  2.34-270.el9_8                                   rpm     CVE-2026-5928   Medium      < 0.1% (21st)  < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-3644   Medium      < 0.1% (19th)  < 0.1  
+python                  3.12.13              3.14.5                      binary  CVE-2026-8328   Medium      < 0.1% (16th)  < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-4224   Medium      < 0.1% (15th)  < 0.1  
+glibc                   2.34-270.el9_8                                   rpm     CVE-2026-5435   Medium      < 0.1% (15th)  < 0.1  
+glibc-common            2.34-270.el9_8                                   rpm     CVE-2026-5435   Medium      < 0.1% (15th)  < 0.1  
+glibc-minimal-langpack  2.34-270.el9_8                                   rpm     CVE-2026-5435   Medium      < 0.1% (15th)  < 0.1  
+python                  3.12.13                                          binary  CVE-2025-12781  Medium      < 0.1% (14th)  < 0.1  
+ncurses-base            6.2-12.20210508.el9                              rpm     CVE-2023-50495  Low         < 0.1% (16th)  < 0.1  
+ncurses-libs            6.2-12.20210508.el9                              rpm     CVE-2023-50495  Low         < 0.1% (16th)  < 0.1  
+pcre2                   10.40-6.el9                                      rpm     CVE-2022-41409  Low         < 0.1% (15th)  < 0.1  
+pcre2-syntax            10.40-6.el9                                      rpm     CVE-2022-41409  Low         < 0.1% (15th)  < 0.1  
+libgcc                  11.5.0-14.el9                                    rpm     CVE-2022-27943  Low         < 0.1% (14th)  < 0.1  
+python                  3.12.13                                          binary  CVE-2026-6019   Medium      < 0.1% (13th)  < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-3446   Medium      < 0.1% (8th)   < 0.1  
+python                  3.12.13                                          binary  CVE-2026-4786   High        < 0.1% (6th)   < 0.1  
+python                  3.12.13              *3.13.10, 3.14.1, 3.15.0a3  binary  CVE-2025-13837  Medium      < 0.1% (9th)   < 0.1  
+python                  3.12.13                                          binary  CVE-2026-1502   Medium      < 0.1% (6th)   < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-4519   Low         < 0.1% (3rd)   < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a7  binary  CVE-2026-2297   Medium      < 0.1% (1st)   < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2025-13462  Low         < 0.1% (6th)   < 0.1  
+python                  3.12.13              *3.13.13, 3.14.4, 3.15.0a8  binary  CVE-2026-3479   Negligible  < 0.1% (3rd)   < 0.1

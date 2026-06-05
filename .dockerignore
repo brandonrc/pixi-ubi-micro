@@ -1,0 +1,8 @@
+# Never ship the local (osx) pixi environment into the build context.
+.pixi/
+__pycache__/
+*.pyc
+.git/
+.github/
+.scan-results/
+*.md

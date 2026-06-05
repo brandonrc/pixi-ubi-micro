@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Brandon Geraci <bgeraci@openteams.com>"]
+channels = ["conda-forge"]
+name = "pixi-ubi-micro"
+version = "0.1.0"
+platforms = ["linux-64", "linux-aarch64", "osx-arm64"]
+
+[tasks]
+start = "python main.py"
+
+[dependencies]
+python = "3.12.*"
+numpy = "*"
+pandas = "*"
+scipy = "*"
